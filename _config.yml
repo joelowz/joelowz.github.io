@@ -1,6 +1,6 @@
 # Site settings
 title: Alpharization
-SEOTitle: 黄玄的博客 | Hux Blog
+SEOTitle: bleep | bloop
 header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: "description"
@@ -59,7 +59,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+#disqus_username: hux
 
 # Netease settings
 netease_comment: false
