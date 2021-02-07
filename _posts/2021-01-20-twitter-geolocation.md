@@ -7,7 +7,7 @@ author:     "J"
 catalog: false
 header-style: text
 tags:
-    - Rando
+    - Data Science
 ---
 My first real hit at modelling was probably building a model that predicts twitter users' geolocation through text. Also, my first kaggle competition (internally). Going to keep this fresh, and with as little mathematics as possible.
 
@@ -33,4 +33,21 @@ $$WLH(w) = \max_{s \in S} \frac{P(w|s)}{P(w)}$$
 This heuristic was implemented to help reduce the feature space and decrease our error rate; seen below by increasing the % of sorted features used. Where the error rate for development data flatlines around the 20% mark, 25% of the top features were utilised for modelling.
 ![image info](/img/twitter-geolocation-1.jpg)
 
-A favourite of the kaggle community is the Stacked Generalisation method, from David H. Wolpert. This is where we select base classifiers at Level 0, to make predictions on the data; where we then use the predictions as inputs to a new metaclassifer at Level 1.
+A favourite of the kaggle community is the Stacked Generalisation method, from David H. Wolpert. This is where we select base classifiers at Level 0, to make predictions on the data; where I then used the predictions as inputs to a new metaclassifer at Level 1.
+
+My base classifiers of choice were the; Multinomial Naive Bayes, Regularised Logistic Regression and Random Forests. Keeping it really simple here, as I remember I was more focused on data representation rather than the complexity of my models. I also used the Regularised Logistic Regression as my metaclassifier, to return the predictions.
+
+Each of my model-data representaion I used is shown below.
+
+| Classifier  | Data representation  |
+| ------------- | ------------- |
+| Multinomial Naive Bayes  | n-gram |
+| Logistic Regression  | Counts  |
+| Logistic Regression  | Tf-idf  |
+| Random Forests  | Counts  |
+| Logistic Regression   | Level 0 predictions  |
+
+
+At this stage, my hyperparameters were then be tuned for the individual models by running a grid search across the parameters.
+
+The model ensemble managed to achieve a development set accuracy of 0.475, and around 0.37 for the kaggle private leaderboard submission. For comparison, average techniques in this area of research were at about 0.40, with more complex architecture pushing to about 0.50. More importantly, I managed to place 4th, which was great, given that I was an engineering major; fighting with my math and computer science peers.

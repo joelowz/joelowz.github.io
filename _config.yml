@@ -78,7 +78,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "sidebar-about-description"
+sidebar-about-description: "I like building things, destroying them, and then building them again."
 sidebar-avatar: /img/avatar-joel.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
