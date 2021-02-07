@@ -33,4 +33,4 @@ $$WLH(w) = \max_{s \in S} \frac{P(w|s)}{P(w)}$$
 This heuristic was implemented to help reduce the feature space and decrease our error rate; seen below by increasing the % of sorted features used. Where the error rate for development data flatlines around the 20% mark, 25% of the top features were utilised for modelling.
 ![image info](/img/twitter-geolocation-1.jpg)
 
-A favourite of the kaggle community is the Stacked Generalisation method, from David H.Wolpert. This is where we select base classifiers at Level 0, to make predictions on the data; where we then use the predictions as inputs to a new metaclassifer at Level 1.
+A favourite of the kaggle community is the Stacked Generalisation method, from David H. Wolpert. This is where we select base classifiers at Level 0, to make predictions on the data; where we then use the predictions as inputs to a new metaclassifer at Level 1.
