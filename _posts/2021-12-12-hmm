@@ -1,0 +1,24 @@
+# Computer Arthimetic
+
+## Integers
+32 bits represents $2^{32}$, includes 0.
+Where,
+min = -$2^{31}$
+max = $2^{31}-1$
+
+max+1, flips it around to min
+
+Integer Arthimetic - equivalent class g(a,b) = g~(a,b) + x 2^intsize
+
+## Floating Point Numbers
+IEEE 754 - [Floating point number](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
+
+FPNs are encoded by integers of sign, value and scale (sce).
+$$s \epsilon {0,1}, 1 bit$$
+$$ 0 \leq c < 2^p, p bits$$
+$$emin \leq e \leq emax, r bits$$
+
+Common values are: 1+p+r = 32/64
+
+### Normalized floating point numbers
+$$x=(-1)^s\cdot (1+\frac{c}{2^p})\cdot 2^e$$
